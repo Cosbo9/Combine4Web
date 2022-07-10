@@ -8,8 +8,8 @@ export const environment = {
   apiKey: 'https://combine4api.herokuapp.com/',
   game: 'https://combine4api.herokuapp.com/game/' ,
   games: 'https://combine4api.herokuapp.com/games/',
-  signUp: "http://localhost:3000/signup",
-  login: "http://localhost:3000/login",
+  signUp: "https://combine4api.herokuapp.com/signup",
+  login: "https://combine4api.herokuapp.com/login",
 };
 
 /*
