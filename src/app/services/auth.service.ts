@@ -8,22 +8,24 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class AuthService {
-
-  constructor(private http: HttpClient, private router: Router) { }
-
+  constructor(private http: HttpClient, private router: Router) {}
 
   signUp(info: any) {
-    console.log(info)
-    return this.http.post(environment.signUp, info, { observe: 'response' })
+    console.log(info);
+    return this.http.post('https://combine4api.herokuapp.com/signup', info, {
+      observe: 'response',
+    });
   }
 
   signIn(info: any) {
-    return this.http.post(environment.login, info, { observe: "response" })
+    return this.http.post('https://combine4api.herokuapp.com/login', info, {
+      observe: 'response',
+    });
   }
 
   signOut() {
     localStorage.removeItem('token');
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
   }
 
   getUser() {}

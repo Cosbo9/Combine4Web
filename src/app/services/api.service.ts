@@ -11,19 +11,21 @@ export class ApiService {
   createGame() {
     var token = localStorage.getItem('token');
     return token != null
-      ? this.http.post(environment.game, { game: { token: token } })
-      : this.http.post(environment.game, { game: {} });
+      ? this.http.post('https://combine4api.herokuapp.com/game/', {
+          game: { token: token },
+        })
+      : this.http.post('https://combine4api.herokuapp.com/game/', { game: {} });
   }
 
   joinGame(gameId: number) {
     var token = localStorage.getItem('token');
-    return this.http.post(environment.game + 'join', {
+    return this.http.post('https://combine4api.herokuapp.com/game/join', {
       game: { game_id: gameId, token: token },
     });
   }
 
   playMove(id: number, move: number, token: string) {
-    return this.http.post(environment.game + 'play', {
+    return this.http.post('https://combine4api.herokuapp.com/game/' + 'play', {
       game: {
         token: token,
         game_id: id,
@@ -33,10 +35,14 @@ export class ApiService {
   }
 
   sendLobbyMessage(body: string) {
-    return this.http.post(environment.apiKey + 'lobby/message', {message: body});
+    return this.http.post('https://combine4api.herokuapp.com/lobby/message', {
+      message: body,
+    });
   }
 
   sendGameChatMessage(body: string) {
-    return this.http.post(environment.apiKey + 'game/message', {message: body});
+    return this.http.post('https://combine4api.herokuapp.com/game/message', {
+      message: body,
+    });
   }
 }

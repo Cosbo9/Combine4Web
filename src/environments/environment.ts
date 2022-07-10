@@ -4,12 +4,6 @@
 
 export const environment = {
   production: false,
-  base: 'https://combine4api.herokuapp.com',
-  apiKey: 'https://combine4api.herokuapp.com/',
-  game: 'https://combine4api.herokuapp.com/game/' ,
-  games: 'https://combine4api.herokuapp.com/games/',
-  signUp: "https://combine4api.herokuapp.com/signup",
-  login: "https://combine4api.herokuapp.com/login",
 };
 
 /*

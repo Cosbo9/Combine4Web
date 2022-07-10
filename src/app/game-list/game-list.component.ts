@@ -20,7 +20,7 @@ export class GameListComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get(environment.games)
+      .get('https://combine4api.herokuapp.com/games/')
       .subscribe((games) => (this.availableGames = games));
       // setInterval(() => {
       //   this.http
