@@ -5,12 +5,12 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/combine4-web'));
+app.use(express.static(__dirname + '/dist/Combine4Web'));
 
 app.get('/*', function(req, res) {
 
-    res.sendFile(path.join(__dirname + '/dist/combine4-web/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/Combine4Web/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 6969);
