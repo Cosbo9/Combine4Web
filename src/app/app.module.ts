@@ -17,8 +17,8 @@ import { HttpClient, HttpClientModule, HttpHeaders, HTTP_INTERCEPTORS } from '@a
 import { AuthenticationComponent } from './header/authentication/authentication.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DeviseInterceptor } from './devise-interceptor';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -43,7 +43,7 @@ import { DeviseInterceptor } from './devise-interceptor';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: DeviseInterceptor, multi: true}
