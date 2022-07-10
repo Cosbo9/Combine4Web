@@ -34,6 +34,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     GameplayScreenComponent,
     AuthenticationComponent,
     LeaderboardComponent,
+    LobbyChatComponent
   ],
   imports: [
     BrowserModule,

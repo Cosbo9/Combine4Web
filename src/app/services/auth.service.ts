@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -13,11 +14,11 @@ export class AuthService {
 
   signUp(info: any) {
     console.log(info)
-    return this.http.post("http://localhost:3000/signup", info, { observe: 'response' })
+    return this.http.post(environment.signUp, info, { observe: 'response' })
   }
 
   signIn(info: any) {
-    return this.http.post("http://localhost:3000/login", info, { observe: "response" })
+    return this.http.post(environment.login, info, { observe: "response" })
   }
 
   signOut() {
