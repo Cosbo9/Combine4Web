@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  base: 'https://combine4api.herokuapp.com',
+  apiKey: 'https://combine4api.herokuapp.com/',
+  game: 'https://combine4api.herokuapp.com/game/' ,
+  games: 'https://combine4api.herokuapp.com/games/',
 };
 
 /*
